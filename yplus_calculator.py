@@ -23,14 +23,14 @@ def enter_data():
         u_tau = math.sqrt(tau_wall/rho)
         deltas = (yplus*mi)/(u_tau*rho)
         deltas_s = "{:.2e}".format(deltas)
-        tkinter.messagebox.showinfo(title="y+ calculator", message="Reynolds number=" + str(reynolds_s) + "\n Wall spacing=" + str(deltas_s))
+        tkinter.messagebox.showinfo(title="y+ calculator", message="Reynolds number=" + str(reynolds_s) + "\n Wall spacing=" + str(deltas_s) + "m")
     elif reynolds > 1e7 and reynolds < 1e9: #eqn 21.16 footnote in "Boundary Layer Theory", Schlichting
         Cf = (2*math.log(reynolds)-0.65)**(-2.3)
         tau_wall = (Cf*rho*(uinf**2))/(2)
         u_tau = math.sqrt(tau_wall/rho)
         deltas = (yplus*mi)/(u_tau*rho)
         deltas_s = "{:.2e}".format(deltas)
-        tkinter.messagebox.showinfo(title="y+ calculator", message="Reynolds number=" + str(reynolds_s) + "\n Wall spacing=" + str(deltas_s))
+        tkinter.messagebox.showinfo(title="y+ calculator", message="Reynolds number=" + str(reynolds_s) + "\n Wall spacing=" + str(deltas_s) + "m")
     else:
         tkinter.messagebox.showwarning(title= "Error",message= "Reynolds outside of the correlation range.")
     
