@@ -32,7 +32,7 @@ def enter_data():
         deltas_s = "{:.2e}".format(deltas)
         tkinter.messagebox.showinfo(title="y+ calculator", message="Reynolds number=" + str(reynolds_s) + "\n Wall spacing=" + str(deltas_s))
     else:
-        tkinter.messagebox.showwarning(title= "Error",message= "Reynolds fuori dal range utile per le correlazioni.")
+        tkinter.messagebox.showwarning(title= "Error",message= "Reynolds outside of the correlation range.")
     
     
 window = tkinter.Tk()
